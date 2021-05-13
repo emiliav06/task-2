@@ -34,32 +34,61 @@ int main() {
 	int guess = 0;// enter a guess
 	cin >> guess;
 	// Get digits from lottery
-	int lotteryDigit1 = a;
-	int lotteryDigit2 = b;
-    int lotteryDigit3 = c;
+	//int lotteryDigit1 = a;
+	//int lotteryDigit2 = b;
+    //int lotteryDigit3 = c;
 	// Get digits from guess
   
 	int guessDigit1 = guess / 100;
 	int guessDigit2 = (guess % 100) / 10;
     int guessDigit3 = (guess % 100) % 10;
-   cout << guessDigit1<<" " << guessDigit2<< " "<< guessDigit3;
+    //cout << guessDigit1<<" " << guessDigit2<< " "<< guessDigit3;
   
-	//cout << "The lottery number is " << num << endl;
-	// Check the guess
-	//if (guess == lottery){
-		//cout << "Exact match: you win $10,000";
-	//}
-	//else if (guessDigit2 == lotteryDigit1
-	//&& guessDigit1 == lotteryDigit2){
-		//cout << "Match all digits: you win $3,000";
-	//}
-	//else if (guessDigit1 == lotteryDigit1
-	//|| guessDigit1 == lotteryDigit2
-	//|| guessDigit2 == lotteryDigit1
-	//|| guessDigit2 == lotteryDigit2){
-	//	cout << "Match one digit: you win $1,000";
-	//}
-	//else{
-	//	cout << "Sorry, no match";
-	//}
+	cout << "The lottery number is " << num << endl;
+	//Check the guess
+	if (guess == num){
+		cout << "Exact match: you win $10,000";
+	}
+	else if (guessDigit1 == a && guessDigit2 == c && guessDigit3 == b)
+	//	&& guessDigit1 == lotteryDigit2 && guessDigit3 == lotteryDigit3
+	{
+		cout << "Match all digits: you win $3,000";
+	}
+	else if (guessDigit1 == b && guessDigit2 == a && guessDigit3 == c)
+	//	&& guessDigit1 == lotteryDigit2 && guessDigit3 == lotteryDigit3
+	{
+		cout << "Match all digits: you win $3,000";
+	}
+	else if (guessDigit1 == b && guessDigit2 == c && guessDigit3 == a)
+	//	&& guessDigit1 == lotteryDigit2 && guessDigit3 == lotteryDigit3
+	{
+		cout << "Match all digits: you win $3,000";
+	}
+	else if (guessDigit1 == c && guessDigit2 == a && guessDigit3 == b)
+	//	&& guessDigit1 == lotteryDigit2 && guessDigit3 == lotteryDigit3
+	{
+		cout << "Match all digits: you win $3,000";
+	}
+	else if (guessDigit1 == c && guessDigit2 == b && guessDigit3 == a)
+	//	&& guessDigit1 == lotteryDigit2 && guessDigit3 == lotteryDigit3
+	{
+		cout << "Match all digits: you win $3,000";
+	}
+	
+	else if (
+	   guessDigit1 == a
+	|| guessDigit1 == b
+	|| guessDigit1 == c
+	|| guessDigit2 == a
+	|| guessDigit2 == b
+	|| guessDigit2 == c
+	|| guessDigit3 == a
+	|| guessDigit3 == b
+	|| guessDigit3 == c
+	){
+		cout << "Match one digit: you win $1,000";
+	}
+	else{
+		cout << "Sorry, no match";
+	}
 }
