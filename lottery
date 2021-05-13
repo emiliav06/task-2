@@ -36,13 +36,13 @@ int main() {
 	// Get digits from lottery
 	int lotteryDigit1 = a;
 	int lotteryDigit2 = b;
-  int lotteryDigit3 = c;
+    int lotteryDigit3 = c;
 	// Get digits from guess
   
-	int guessDigit1 = guess / 10;
-	int guessDigit2 = guess % 10;
-  int guessDigit3 = guess / 100;
-   cout << guessDigit1 << guessDigit2 << guessDigit3;
+	int guessDigit1 = guess / 100;
+	int guessDigit2 = (guess % 100) / 10;
+    int guessDigit3 = (guess % 100) % 10;
+   cout << guessDigit1<<" " << guessDigit2<< " "<< guessDigit3;
   
 	//cout << "The lottery number is " << num << endl;
 	// Check the guess
