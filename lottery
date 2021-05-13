@@ -8,43 +8,38 @@ int main() {
     int a, b, c;
     
     srand(time(0)); //seed random number generator
-     a = rand() % 9 + 1; // random number between 10 and 99
+     a = rand() % 9 + 1; // random number between 1 and 9
 	  do
     {
-     b = rand() % 9 + 1; // random number between 10 and 99
+     b = rand() % 9 + 1; // random number between 1 and 9
     }
     while (a == b);
     do
     {
-     c = rand() % 9 + 1; // random number between 10 and 99
+     c = rand() % 9 + 1; // random number between 1 and 9
     }
     while (a == c);
     do
     {
-     c = rand() % 9 + 1; // random number between 10 and 99
+     c = rand() % 9 + 1; // random number between 1 and 9
     }
     while (b == c);
     
-    int num = a*100 + b*10 + c;
-    //cout << num;
+    int num = a*100 + b*10 + c; // chisloto ot lotariqta
     
-  // Prompt the user to enter a guess
+    //Prompt the user to enter a guess
 
 	cout << "Enter your lottery pick (three different digits): ";
-	int guess = 0;// enter a guess
-	cin >> guess;
-	// Get digits from lottery
-	//int lotteryDigit1 = a;
-	//int lotteryDigit2 = b;
-    //int lotteryDigit3 = c;
+	int guess = 0;
+	cin >> guess; //// enter a guess
+	
 	// Get digits from guess
-  
 	int guessDigit1 = guess / 100;
 	int guessDigit2 = (guess % 100) / 10;
-    int guessDigit3 = (guess % 100) % 10;
-    //cout << guessDigit1<<" " << guessDigit2<< " "<< guessDigit3;
+        int guessDigit3 = (guess % 100) % 10;
   
 	cout << "The lottery number is " << num << endl;
+	
 	//Check the guess
 	if (guess == num){
 		cout << "Exact match: you win $10,000";
